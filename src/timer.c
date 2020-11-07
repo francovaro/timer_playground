@@ -7,11 +7,11 @@
  *  @date  : 05 ott 2020
  */
 
-/* includes*/
+/* ----------------------------------------- includes ----------------------------------------- */
 #include "stm32f4xx.h"
 #include "timer.h"
 
-/* defines */
+/* ----------------------------------------- defines ----------------------------------------- */
 
 #define LED_PIN			GPIO_Pin_5
 #define LED_PORT_		GPIOA
@@ -23,13 +23,13 @@
 #define INPUT_PORT			GPIOA
 #define INPUT_CLOCK			RCC_AHB1Periph_GPIOA
 
-/* Private data */
+/* ----------------------------------------- Private data ----------------------------------------- */
 static volatile uint32_t sys_tick_timer = 0;
 
 
-/* Private function prototype */
+/* ----------------------------------------- Private function prototype ----------------------------------------- */
 
-/* Public functions*/
+/* ----------------------------------------- Public functions ----------------------------------------- */
 void vTimer_setSysTick(uint32_t timeMs)
 {
 	 RCC_ClocksTypeDef RCC_Clocks;
@@ -38,7 +38,8 @@ void vTimer_setSysTick(uint32_t timeMs)
 }
 
 /**
- *
+ * @brief Initialize timer 2 as output compare
+ * @note the pin connected to the timer is GPIOA 5 which in the nucleo board is ocnnected to the user led
  */
 void vTimer_2_init_OC(void)
 {
@@ -97,6 +98,8 @@ void vTimer_2_init_OC(void)
 }
 
 /**
+ * @brief Initialize timer 5 as input compare
+ * @note input pin is 0 on port GPIOA
  *
  */
 void vTimer_5_init_IC(void)
@@ -171,7 +174,7 @@ void vTimer_5_init_IC(void)
 }
 
 /**
- *
+ * @brief Enables or diasble timer 2
  * @param to_set
  */
 void vTIM2_command(FunctionalState to_set)
@@ -180,7 +183,7 @@ void vTIM2_command(FunctionalState to_set)
 }
 
 /**
- *
+ * @brief Enables or diasble timer 5
  * @param to_set
  */
 void vTIM5_command(FunctionalState to_set)
@@ -188,9 +191,9 @@ void vTIM5_command(FunctionalState to_set)
 	TIM_Cmd(TIM5, to_set);				/* set CEN - Counter enable bit */
 }
 
-/* Private functions */
+/* ----------------------------------------- Private functions ----------------------------------------- */
 
-/* Interrupt handler */
+/* ----------------------------------------- Interrupt handler ----------------------------------------- */
 /**
  *
  */
@@ -200,7 +203,7 @@ void TIM5_IRQHandler(void)
 }
 
 /**
- *
+ * @brief Interrupt handler for timer 2
  */
 void TIM2_IRQHandler(void)
 {
@@ -227,6 +230,9 @@ void TIM2_IRQHandler(void)
 	}
 }
 
+/**
+ * @brief the sys tick irq handler
+ */
 void SysTick_Handler(void)
 {
 	sys_tick_timer++;
