@@ -205,6 +205,7 @@ void TIM5_IRQHandler(void)
 void TIM2_IRQHandler(void)
 {
 	uint32_t time;
+	(void)time;
 
 	if (TIM_GetITStatus(TIM2, TIM_IT_Update))
 	{
