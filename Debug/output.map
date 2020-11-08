@@ -281,7 +281,7 @@ Discarded input sections
  .data          0x00000000       0x14 src/system_stm32f4xx.o
  .bss           0x00000000        0x0 src/system_stm32f4xx.o
  .text.SystemCoreClockUpdate
-                0x00000000      0x19c src/system_stm32f4xx.o
+                0x00000000       0xe0 src/system_stm32f4xx.o
  .debug_macro   0x00000000      0xa72 src/system_stm32f4xx.o
  .debug_macro   0x00000000       0x65 src/system_stm32f4xx.o
  .debug_macro   0x00000000       0x3b src/system_stm32f4xx.o
@@ -1629,7 +1629,7 @@ OUTPUT(timer_playground.elf elf32-littlearm)
  .debug_ranges  0x00000150      0x1d8 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_rcc.o)
  .debug_ranges  0x00000328      0x2e8 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_tim.o)
 
-.debug_macro    0x00000000    0x13654
+.debug_macro    0x00000000    0x13662
  .debug_macro   0x00000000      0x1f8 src/main.o
  .debug_macro   0x000001f8      0xa72 src/main.o
  .debug_macro   0x00000c6a       0x65 src/main.o
@@ -1675,44 +1675,44 @@ OUTPUT(timer_playground.elf elf32-littlearm)
  .debug_macro   0x00010973      0x142 src/main.o
  .debug_macro   0x00010ab5      0x191 src/main.o
  .debug_macro   0x00010c46       0x35 src/main.o
- .debug_macro   0x00010c7b      0x219 src/system_stm32f4xx.o
- .debug_macro   0x00010e94      0x228 src/timer.o
- .debug_macro   0x000110bc      0x1fe C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(misc.o)
- .debug_macro   0x000112ba      0xa5a C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(misc.o)
- .debug_macro   0x00011d14       0x7c C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(misc.o)
- .debug_macro   0x00011d90      0x1fc C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_gpio.o)
- .debug_macro   0x00011f8c      0x33b C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_gpio.o)
- .debug_macro   0x000122c7      0x2cb C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_rcc.o)
- .debug_macro   0x00012592      0x767 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_rcc.o)
- .debug_macro   0x00012cf9      0x226 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_tim.o)
- .debug_macro   0x00012f1f      0x735 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_tim.o)
+ .debug_macro   0x00010c7b      0x227 src/system_stm32f4xx.o
+ .debug_macro   0x00010ea2      0x228 src/timer.o
+ .debug_macro   0x000110ca      0x1fe C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(misc.o)
+ .debug_macro   0x000112c8      0xa5a C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(misc.o)
+ .debug_macro   0x00011d22       0x7c C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(misc.o)
+ .debug_macro   0x00011d9e      0x1fc C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_gpio.o)
+ .debug_macro   0x00011f9a      0x33b C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_gpio.o)
+ .debug_macro   0x000122d5      0x2cb C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_rcc.o)
+ .debug_macro   0x000125a0      0x767 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_rcc.o)
+ .debug_macro   0x00012d07      0x226 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_tim.o)
+ .debug_macro   0x00012f2d      0x735 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_tim.o)
 
-.debug_line     0x00000000     0x3fdb
+.debug_line     0x00000000     0x3fd6
  .debug_line    0x00000000      0x6b1 src/main.o
- .debug_line    0x000006b1      0x71a src/system_stm32f4xx.o
- .debug_line    0x00000dcb      0x7b7 src/timer.o
- .debug_line    0x00001582       0x7c startup/startup_stm32.o
- .debug_line    0x000015fe      0x6e7 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(misc.o)
- .debug_line    0x00001ce5      0x80d C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_gpio.o)
- .debug_line    0x000024f2      0xb8a C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_rcc.o)
- .debug_line    0x0000307c      0xf5f C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_tim.o)
+ .debug_line    0x000006b1      0x715 src/system_stm32f4xx.o
+ .debug_line    0x00000dc6      0x7b7 src/timer.o
+ .debug_line    0x0000157d       0x7c startup/startup_stm32.o
+ .debug_line    0x000015f9      0x6e7 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(misc.o)
+ .debug_line    0x00001ce0      0x80d C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_gpio.o)
+ .debug_line    0x000024ed      0xb8a C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_rcc.o)
+ .debug_line    0x00003077      0xf5f C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_tim.o)
 
-.debug_str      0x00000000    0x6f447
+.debug_str      0x00000000    0x6f47a
  .debug_str     0x00000000    0x6cc63 src/main.o
                               0x6cee0 (size before relaxing)
- .debug_str     0x0006cc63      0x273 src/system_stm32f4xx.o
-                              0x6d152 (size before relaxing)
- .debug_str     0x0006ced6      0xb7a src/timer.o
+ .debug_str     0x0006cc63      0x2a6 src/system_stm32f4xx.o
+                              0x6d185 (size before relaxing)
+ .debug_str     0x0006cf09      0xb7a src/timer.o
                               0x6db82 (size before relaxing)
- .debug_str     0x0006da50       0x29 startup/startup_stm32.o
+ .debug_str     0x0006da83       0x29 startup/startup_stm32.o
                                  0x56 (size before relaxing)
- .debug_str     0x0006da79      0x15d C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(misc.o)
+ .debug_str     0x0006daac      0x15d C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(misc.o)
                               0x6d124 (size before relaxing)
- .debug_str     0x0006dbd6      0x18c C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_gpio.o)
+ .debug_str     0x0006dc09      0x18c C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_gpio.o)
                               0x6d1cc (size before relaxing)
- .debug_str     0x0006dd62      0xcd4 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_rcc.o)
+ .debug_str     0x0006dd95      0xcd4 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_rcc.o)
                               0x6dda8 (size before relaxing)
- .debug_str     0x0006ea36      0xa11 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_tim.o)
+ .debug_str     0x0006ea69      0xa11 C:\work\workspace_stm\nucleo-f446re_stdperiph_lib\Debug\libnucleo-f446re_stdperiph_lib.a(stm32f4xx_tim.o)
                               0x6dbc3 (size before relaxing)
 
 .comment        0x00000000       0x7f

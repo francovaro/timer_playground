@@ -73,7 +73,7 @@ void vTimer_2_init_OC(void)
 
 	TIM_TimeBaseInitStruct.TIM_Prescaler = prescaler;
 	TIM_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;
-	TIM_TimeBaseInitStruct.TIM_Period = 10000;						/* period => 1ms*10000 = 1s*/
+	TIM_TimeBaseInitStruct.TIM_Period = 1000;						/* period => 1ms*1000 = 1s*/
 	TIM_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV1;
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStruct);	/* TIM 2 */
 
@@ -81,7 +81,7 @@ void vTimer_2_init_OC(void)
 	TIM_OCStructInit(&TIM_OCInitStruct);
 	TIM_OCInitStruct.TIM_OCMode = TIM_OCMode_PWM1;	/* why pwm1 and not TIM_OCMode_Active */
 	TIM_OCInitStruct.TIM_OutputState = TIM_OutputState_Enable;
-	TIM_OCInitStruct.TIM_Pulse = (2000); 							/* duty time = 5000*1ms = 5s*/
+	TIM_OCInitStruct.TIM_Pulse = (500); 							/* duty time = 500*1ms = 0.5s*/
 	TIM_OCInitStruct.TIM_OCPolarity = TIM_OCPolarity_High;
 	TIM_OC1Init(TIM2, &TIM_OCInitStruct);
 
@@ -119,7 +119,7 @@ void vTimer_5_init_IC(void)
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
+	GPIO_Init(INPUT_PORT, &GPIO_InitStructure);
 
 	GPIO_PinAFConfig(INPUT_PORT, INPUT_PIN_SRC, GPIO_AF_TIM5);
 
