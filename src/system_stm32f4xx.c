@@ -567,7 +567,7 @@ void SystemInit(void)
 void SystemCoreClockUpdate(void)
 {
   uint32_t tmp = 0, pllvco = 0, pllp = 2, pllsource = 0, pllm = 2;
-#if defined(STM32F412xG) || defined(STM32F413_423xx) || defined(STM32F446xx)  
+#if defined(STM32F412xG) || defined(STM32F413_423xx)
   uint32_t pllr = 2;
 #endif /* STM32F412xG || STM32F413_423xx || STM32F446xx */
   /* Get SYSCLK source -------------------------------------------------------*/
