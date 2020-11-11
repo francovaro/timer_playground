@@ -2,3 +2,6 @@
 Debug/timer_playground.elf
 *.o
 *.o
+*.o
+*.map
+*.elf

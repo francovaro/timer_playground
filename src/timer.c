@@ -64,7 +64,7 @@ void vTimer_2_init_OC(void)
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 
 	RCC_GetClocksFreq(&RCC_ClocksStatus);
-	uint16_t prescaler = ((RCC_ClocksStatus.PCLK1_Frequency)) / 1000  - 1; //1 tick = 1ms
+	uint16_t prescaler = ((RCC_ClocksStatus.PCLK1_Frequency*2)) / 1000  - 1; //1 tick = 1ms
 
 	// tick freq = timer freq / (prescaler + 1)
 	// tick freq = 84Mhz/ 84Mhz / 1000
